@@ -7,147 +7,111 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<section class="homepage">
-			<header>
+		<section id="homepage" class="homepage">
+			<header class="home-header">
 				<a href="" id="sidebar-settings">
 					<img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px">
 				</a>
+				<p class="brand-name">Mama Put</p>
 				<a href="" id="location-settings">
 					<img src="./files/location_icon.png" alt="location-settings-icon" /
 					height="32px" width="32px">
 				</a>
 			</header>
 			<main>
-				<form action="" class="main-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				<form id="home-search" action="" class="home-search">
+					<input
+						id="home-search-bar"
+						class="home-search-bar"
+						type="search"
+						placeholder="Search"
+					/>
+					<button
+						id="home-search-submit-button"
+						class="home-search-submit-button"
+						type="submit"
+					>
+						<img src="./files/search.png" alt="" />
+					</button>
 				</form>
-				<section class="main-categories">
+				<section class="home-categories">
 					<p>Meal Categories</p>
 					<!--comment  might receive -->
 					<div>
-						<button>swallow</button>
+						<button>Swallow</button>
 						<button>Rice</button>
 						<button>Porridge</button>
 						<button>Chinese Food</button>
 						<button>Sea Food</button>
 					</div>
 				</section>
-				<section class="main-meals">
+				<section class="home-meals">
 					<!-- 	comment must replace -->
 					<p>Popular Meals</p>
 					<section>
 						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
+							<div class="image-wrapper">
+								<img
+									src="./files/seafood_shrimp.png"
+									alt="seafood-shrimp-image"
+								/>
+								<button class="view-details">View <span>.</span></button>
+							</div>
 							<p>Seafood Shrimp</p>
 							<div class="stars"></div>
 							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
-						</div>
-						<div>
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-							<p class="view-meal">view</p>
 						</div>
 					</section>
 				</section>
 			</main>
 			<footer>
-				<nav>
-					<a href="" id="footer-navigation-home"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
-					<a href="" id="footer-navigation-cart"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
-					<a href="" id="footer-navigation-profile"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
+				<a href="" id="footer-navigation-home"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
+				<a href="" id="footer-navigation-cart"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
+				<a href="" id="footer-navigation-profile"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
 
-					<a href="" id="footer-navigation-settings"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
-				</nav>
+				<a href="" id="footer-navigation-settings"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
 			</footer>
+		</section>
+		<section id="category" class="category">
+			<header class="category-header">
+				<img src="./files/back.png" alt="" class="back-icon"/> <span>Meal categories</span>
+				<img src="./files/back.png" alt="" class="cart-icon" />
+			</header>
+			<main class="category-meals">
+						<div>
+							<div class="meal-wrapper"><div class="image-wrapper">
+								<img
+									src="./files/seafood_shrimp.png"
+									alt="seafood-shrimp-image"
+								/>
+								<button class="view-details">View <span>.</span></button>
+							</div>
+							<p>Seafood Shrimp</p>
+							<span class="stars"></span>
+							<p class="price">$3 per plate</p><button>Add to cart</button>
+</div>
+													</div>
+			</main>
+			<footer><span>Swallow</span></footer>
 		</section>
 		<section class="sidebar-settings">
 			<header class="sidebar-settings-header">
 				<img src="./files/back.png" alt="" />
 			</header>
-			<nav class="sidebar-settings-main">
+			<main class="sidebar-settings-main">
 				<button>
 					<img src="./files/cart.png" alt="" /> <span> Order schedule</span>
 				</button>
@@ -178,28 +142,26 @@
 					impedit deleniti eaque nisi repellendus in quibusdam vitae optio
 					deserunt officia commodi aspernatur, dicta!
 				</p>
-			</nav>
+			</main>
 			<section class="sidebar-settings-footer">
 				<footer>
-					<nav>
-						<a href="" id="footer-navigation-home"
-							><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-							height="32px" width="32px"></a
-						>
-						<a href="" id="footer-navigation-cart"
-							><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-							height="32px" width="32px"></a
-						>
-						<a href="" id="footer-navigation-profile"
-							><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-							height="32px" width="32px"></a
-						>
+					<a href="" id="footer-navigation-home"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
+					<a href="" id="footer-navigation-cart"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
+					<a href="" id="footer-navigation-profile"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
 
-						<a href="" id="footer-navigation-settings"
-							><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-							height="32px" width="32px"></a
-						>
-					</nav>
+					<a href="" id="footer-navigation-settings"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
 				</footer>
 			</section>
 		</section>
@@ -222,14 +184,77 @@
 							<div class="cart-item-stars">a</div>
 							<p class="cart-item-price">$3 per plate</p>
 						</div>
-						<p class="cart-item-plates">No of plates <span> yo </span></p>
-						<p class="cart-item-total-price">Price <span> yo2 </span></p>
+						<p class="cart-item-plates">Number of plates</p>
+						<span> yo </span>
+						<p class="cart-item-total-price">Price</p>
+						<span> yo2 </span>
+					</div>
+					<div><img src="./files/delete.png" alt="" /></div>
+				</div>
+
+				<div>
+					<div class="cart-item">
+						<div class="cart-item-image">
+							<img
+								src="./files/seafood_shrimp.png"
+								alt="seafood-shrimp-image"
+							/>
+						</div>
+						<div>
+							<p class="cart-item-name">Seafood Shrimp</p>
+							<div class="cart-item-stars">a</div>
+							<p class="cart-item-price">$3 per plate</p>
+						</div>
+						<p class="cart-item-plates">Number of plates</p>
+						<span> yo </span>
+						<p class="cart-item-total-price">Price</p>
+						<span> yo2 </span>
+					</div>
+					<div><img src="./files/delete.png" alt="" /></div>
+				</div>
+				<div>
+					<div class="cart-item">
+						<div class="cart-item-image">
+							<img
+								src="./files/seafood_shrimp.png"
+								alt="seafood-shrimp-image"
+							/>
+						</div>
+						<div>
+							<p class="cart-item-name">Seafood Shrimp</p>
+							<div class="cart-item-stars">a</div>
+							<p class="cart-item-price">$3 per plate</p>
+						</div>
+						<p class="cart-item-plates">Number of plates</p>
+						<span> yo </span>
+						<p class="cart-item-total-price">Price</p>
+						<span> yo2 </span>
+					</div>
+					<div><img src="./files/delete.png" alt="" /></div>
+				</div>
+				<div>
+					<div class="cart-item">
+						<div class="cart-item-image">
+							<img
+								src="./files/seafood_shrimp.png"
+								alt="seafood-shrimp-image"
+							/>
+						</div>
+						<div>
+							<p class="cart-item-name">Seafood Shrimp</p>
+							<div class="cart-item-stars">a</div>
+							<p class="cart-item-price">$3 per plate</p>
+						</div>
+						<p class="cart-item-plates">Number of plates</p>
+						<span> yo </span>
+						<p class="cart-item-total-price">Price</p>
+						<span> yo2 </span>
 					</div>
 					<div><img src="./files/delete.png" alt="" /></div>
 				</div>
 			</main>
 			<footer class="cart-footer">
-				<p class="cart-total-price">Price <span> yo2 </span></p>
+				<p class="cart-total-price">Total Price <span> yo2 </span></p>
 				<button class="cart-checkout">Confirm</button>
 			</footer>
 		</section>
@@ -252,14 +277,15 @@
 					<input type="radio" id="monthly" name="frequency" value="monthly" />
 					<label for="monthly">Monthly</label>
 				</div>
-				<div>
+				<div class="date-div">
 					<label class="date-label" for="starting-date">Starting Date</label>
 					<input class="date-input" type="date" id="starting-date" />
 				</div>
-				<div>
+				<div class="date-div">
 					<label class="date-label" for="final-date">Final Date</label>
 					<input class="date-input" type="date" id="final-date" />
 				</div>
+				<button class="make-schedule" type="submit">Proceed</button>
 			</form>
 		</section>
 		<section class="profile">
@@ -275,38 +301,101 @@
 				<section>
 					<p>Personal Information</p>
 					<div>
-						<p>Email:</p>
-						<input type="email" value="dfjfnu" derth>
-						<br />
-						<p>Phone number:</p>
-						<input type="text" value=874637 derth>
+						<p>Email:
+						<input type="email" value="dfjfnu" derth />
+						</p>
+						<p>Phone number:
+						<input type="text" value="874637" derth /></p>
 					</div>
 				</section>
 				<section>
 					<p>Address</p>
 					<div>
-						<p>Contact address</p>
-					<input type="text" value="agbowo ibadan" derth>
+						<p>Contact address
+						<input type="text" value="Agbowo Ibadan" derth /></p>
 					</div>
 				</section>
 				<section>
 					<p>Password</p>
 					<div>
-						<p>Current Password:</p>
-						<input type="password" value="nbhdgchv" derth>
-					</div>
-					<div>
-						<p>Confirm Password:</p>
-						<input type="password" value="nbhdgchv" derth>
+						<p>Current Password:
+						<input type="password" value="nbhdgchv" derth /></p>
+						<p>Confirm Password:
+						<input type="password" value="nbhdgchv" derth /></p>
 					</div>
 				</section>
 			</form>
-			<button type="submit">Edit detail</button>
+			<button type="submit" class="profile-button">Edit detail</button>
+			<section class="unchanged-profile">
+				<div>
+					<p>Leave without making changes?</p>
+				<div class="buttons">
+					<button class="unchanged-profile-yes">Yes</button>
+					<button class="unchanged-profile-no">Back</button>
+				</div></div>
+			</section>
 		</section>
 		<section class="meal-fed">
-			<header>	<img src="./files/back.png" alt="" /> <span>Meal for each day</span></header>
+			<header class="meal-fed-header">
+				<img src="./files/back.png" alt="" /> <span>Meal for each day</span>
+			</header>
 			<section>
-				
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
+				<span>Day <span>4</span></span>
+				<form action="" class="meal-fed-search">
+					<input id="search-bar" type="search" placeholder="Search" />
+					<button type="submit"><img src="./files/search.png" alt="" /></button>
+				</form>
+				<p>Fennel</p>
+			</section>
+			<section>
 				<span>Day <span>4</span></span>
 				<form action="" class="meal-fed-search">
 					<input id="search-bar" type="search" placeholder="Search" />
