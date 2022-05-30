@@ -20,13 +20,7 @@ body {
 /* HOMEPAGE SETTINGS */
 
 .home-header {
-	position: fixed;
-	width: 100vw;
-	height: 2rem;
-	top: 0;
-	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .brand-name {
@@ -85,8 +79,12 @@ body {
 	justify-content: space-evenly;
 }
 
-.home-categories button {
-	margin: 0.25rem;
+.home-categories div a{
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	color: black;
+		margin: 0.25rem;
 	background-color: #cdab82;
 	border: none;
 	padding: 0.5rem;
@@ -175,6 +173,7 @@ body {
 }
 
 /* SHARED HEADERS */
+.home-header,
 .cart-header,
 .sidebar-settings-header,
 .schedule-header,
@@ -215,7 +214,7 @@ body {
 .cart-checkout,
 .make-schedule,
 .profile-button,
-.unchanged-profile button {
+.unchanged-profile button, .meal-fed>button {
 	margin: auto;
 	background-color: white;
 	border: none;
@@ -326,8 +325,8 @@ body {
 /* SIDEBAR SETTINGS */
 
 .sidebar-settings-main {
+	margin: 2rem auto;
 	width: 85vw;
-	margin: auto;
 	display: flex;
 	flex-direction: column;
 }
@@ -351,7 +350,7 @@ body {
 /* CART SETTINGS */
 .cart-main-items {
 	width: 85vw;
-	margin: auto;
+	margin: 2rem auto;
 }
 
 .cart-main-items > div {
@@ -411,7 +410,7 @@ body {
 .schedule-form {
 	width: 85vw;
 	max-width: 400px;
-	margin: auto;
+	margin:2rem auto;
 	display: flex;
 	flex-direction: column;
 }
@@ -446,6 +445,7 @@ body {
 .profile {
 	display: flex;
 	flex-direction: column;
+	margin: 2rem auto;
 }
 
 
@@ -526,6 +526,7 @@ body {
 .meal-fed {
 	display: flex;
 	flex-direction: column;
+	margin: 2rem auto;
 }
 
 

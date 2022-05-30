@@ -5,12 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>JOHN</title>
 		<link rel="stylesheet" href="./style.css" />
-		<style type="text/css"> .hide{display: none;}</style>
+		<style type="text/css">
+			.hide {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
-		<section id="homepage " class="homepage">
+		<section id="homepage" class="homepage ">
 			<header class="home-header">
-				<a href="" id="sidebar-settings">
+				<a href="" data-destination ="#sidebar-settings">
 					<img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px">
 				</a>
@@ -40,11 +44,12 @@
 					<p>Meal Categories</p>
 					<!--comment  might receive -->
 					<div>
-						<button>Swallow</button>
-						<button>Rice</button>
-						<button>Porridge</button>
-						<button>Chinese Food</button>
-						<button>Sea Food</button>
+						<a href="" data-id="home-category">Swallow</a>
+						<a href="" data-id="home-category">Rice</a>
+						<a href="" data-id="home-category">Tubers</a>
+						<a href="" data-id="home-category">Sea food</a>
+						<a href="" data-id="home-category">Proteins</a>
+						<a href="" data-id="home-category">Drinks</a>
 					</div>
 				</section>
 				<section class="home-meals">
@@ -63,152 +68,32 @@
 							<div class="stars"></div>
 							<p class="price">$3 per plate</p>
 						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
-						<div>
-							<div class="image-wrapper">
-								<img
-									src="./files/seafood_shrimp.png"
-									alt="seafood-shrimp-image"
-								/>
-								<button class="view-details">View <span>.</span></button>
-							</div>
-							<p>Seafood Shrimp</p>
-							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
-						</div>
 					</section>
 				</section>
 			</main>
 			<footer>
-				<a href="" id="footer-navigation-home"
+				<a href="" data-destination ="#homepage"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
-				<a href="" id="footer-navigation-cart"
+				<a href="" data-destination ="#cart"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
-				<a href="" id="footer-navigation-profile"
+				<a href="" data-destination ="#profile"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
 
-				<a href="" id="footer-navigation-settings"
+				<a href="" data-destination ="#settings"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
 			</footer>
 		</section>
-		<section id="category" class="category">
+		<section id="category" class="category hide">
 			<header class="category-header">
-				<img src="./files/back.png" alt="" class="back-icon" />
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
 				<span>Meal categories</span>
 				<img src="./files/back.png" alt="" class="cart-icon" />
 			</header>
@@ -230,114 +115,12 @@
 						</button>
 					</div>
 				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="meal-wrapper">
-					<div class="image-wrapper">
-						<img src="./files/seafood_shrimp.png" alt="seafood-shrimp-image" />
-					</div>
-					<p>Seafood Shrimp</p>
-					<span class="stars"></span>
-					<p class="price">$3 per plate</p>
-					<div class="button-wrapper">
-						<button class="category-atc-button">
-							Add to cart
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</button>
-					</div>
-				</div>
 			</main>
-			<footer><span>Swallow</span></footer>
+			<footer><span id="category-footer-text">Category</span></footer>
 		</section>
-		<section class="sidebar-settings">
+		<section id="sidebar-settings" class="sidebar-settings hide">
 			<header class="sidebar-settings-header">
-				<img src="./files/back.png" alt="" />
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
 			</header>
 			<main class="sidebar-settings-main">
 				<button>
@@ -373,93 +156,32 @@
 			</main>
 			<section class="sidebar-settings-footer">
 				<footer>
-					<a href="" id="footer-navigation-home"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
-					<a href="" id="footer-navigation-cart"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
-					<a href="" id="footer-navigation-profile"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
+					<a href="" data-destination ="#homepage"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
+				<a href="" data-destination ="#cart"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
+				<a href="" data-destination ="#profile"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
 
-					<a href="" id="footer-navigation-settings"
-						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-						height="32px" width="32px"></a
-					>
+				<a href="" data-destination ="#settings"
+					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+					height="32px" width="32px"></a
+				>
 				</footer>
 			</section>
 		</section>
-		<section class="cart">
+		<section id="cart" class="cart hide">
 			<header class="cart-header">
-				<img src="./files/back.png" alt="" /> <span>Cart</span>
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
 			</header>
 
 			<main class="cart-main-items">
-				<div>
-					<div class="cart-item">
-						<div class="cart-item-image">
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</div>
-						<div>
-							<p class="cart-item-name">Seafood Shrimp</p>
-							<div class="cart-item-stars">a</div>
-							<p class="cart-item-price">$3 per plate</p>
-						</div>
-						<p class="cart-item-plates">Number of plates</p>
-						<span> yo </span>
-						<p class="cart-item-total-price">Price</p>
-						<span> yo2 </span>
-					</div>
-					<div><img src="./files/delete.png" alt="" /></div>
-				</div>
-
-				<div>
-					<div class="cart-item">
-						<div class="cart-item-image">
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</div>
-						<div>
-							<p class="cart-item-name">Seafood Shrimp</p>
-							<div class="cart-item-stars">a</div>
-							<p class="cart-item-price">$3 per plate</p>
-						</div>
-						<p class="cart-item-plates">Number of plates</p>
-						<span> yo </span>
-						<p class="cart-item-total-price">Price</p>
-						<span> yo2 </span>
-					</div>
-					<div><img src="./files/delete.png" alt="" /></div>
-				</div>
-				<div>
-					<div class="cart-item">
-						<div class="cart-item-image">
-							<img
-								src="./files/seafood_shrimp.png"
-								alt="seafood-shrimp-image"
-							/>
-						</div>
-						<div>
-							<p class="cart-item-name">Seafood Shrimp</p>
-							<div class="cart-item-stars">a</div>
-							<p class="cart-item-price">$3 per plate</p>
-						</div>
-						<p class="cart-item-plates">Number of plates</p>
-						<span> yo </span>
-						<p class="cart-item-total-price">Price</p>
-						<span> yo2 </span>
-					</div>
-					<div><img src="./files/delete.png" alt="" /></div>
-				</div>
 				<div>
 					<div class="cart-item">
 						<div class="cart-item-image">
@@ -486,9 +208,10 @@
 				<button class="cart-checkout">Confirm</button>
 			</footer>
 		</section>
-		<section class="schedule">
+		<section class="schedule  hide">
 			<header class="schedule-header">
-				<img src="./files/back.png" alt="" /> <span>Make a schedule</span>
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
+				<span>Make a schedule</span>
 			</header>
 			<form action="" class="schedule-form">
 				<p>Select your schedule</p>
@@ -513,12 +236,13 @@
 					<label class="date-label" for="final-date">Final Date</label>
 					<input class="date-input" type="date" id="final-date" />
 				</div>
-				<button class="make-schedule" type="submit">Proceed</button>
+				<button class="make-schedule" type="submit" >Proceed</button>
 			</form>
 		</section>
-		<section class="profile">
+		<section id="profile" class="profile hide">
 			<header class="profile-header">
-				<img src="./files/back.png" alt="" /> <span>Profile</span>
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
+				<span>Profile</span>
 			</header>
 			<form class="profile-main edit">
 				<header>
@@ -567,66 +291,10 @@
 				</div>
 			</section>
 		</section>
-		<section class="meal-fed">
+		<section class="meal-fed hide">
 			<header class="meal-fed-header">
-				<img src="./files/back.png" alt="" /> <span>Meal for each day</span>
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a><span>Meal for each day</span>
 			</header>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
-			<section>
-				<span>Day <span>4</span></span>
-				<form action="" class="meal-fed-search">
-					<input id="search-bar" type="search" placeholder="Search" />
-					<button type="submit"><img src="./files/search.png" alt="" /></button>
-				</form>
-				<p>Fennel</p>
-			</section>
 			<section>
 				<span>Day <span>4</span></span>
 				<form action="" class="meal-fed-search">
