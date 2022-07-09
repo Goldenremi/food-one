@@ -41,6 +41,9 @@ body {
 	margin-top: 4rem;
 	box-shadow: 1px 1px 1px 1px;
 	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .home-search-bar,
@@ -64,6 +67,27 @@ body {
 	position: absolute;
 	right: 0%;
 }
+
+.home-search-suggestions{
+	position: absolute;
+	top: 100%;
+	width: 90%;
+	margin: auto;
+	padding-inline: 0;
+	border: 1px solid black;
+}
+
+
+.home-search-suggestions li{
+	background-color: white;
+	border-top:1px solid black ;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding:0 .5rem ;
+	cursor: pointer;
+}
+
 
 .home-categories {
 	margin: 2rem 0;
@@ -151,6 +175,45 @@ body {
 	font-weight: bolder;
 	vertical-align: center;
 	color: red;
+}
+
+.view-meal{
+	
+}
+
+.view-meal-header{
+	display: flex;
+	align-items: center;
+}
+
+.view-meal-back-icon-wrapper{
+	height: 2rem;
+	width: 2rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.view-meal-header-text{
+	margin: auto;
+	font-weight: bold;
+}
+
+.view-meal-main{
+	padding: .5rem;
+}
+
+.view-meal-image-wrapper{
+	width: 100%;
+	aspect-ratio: 1/1;
+	background-color: black;
+	border: 2px solid black;
+}
+
+
+.view-meal-image-wrapper img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /* SHARED */
@@ -283,7 +346,7 @@ body {
 	overflow: hidden;
 }
 
-.meal-wrapper img {
+.category-meals .meal-wrapper img {
 	height: 100%;
 }
 

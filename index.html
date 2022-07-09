@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JOHN</title>
 		<link rel="stylesheet" href="./style.css" />
 		<style type="text/css">
@@ -13,14 +13,14 @@
 		</style>
 	</head>
 	<body>
-		<section id="homepage" class="homepage ">
+		<section id="homepage" class="homepage">
 			<header class="home-header">
-				<a href="" data-destination ="#sidebar-settings">
+				<a href="" data-destination="#sidebar-settings">
 					<img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px">
 				</a>
 				<p class="brand-name">Mama Put</p>
-				<a href="" id="location-settings">
+				<a href="" id="location-settings" data-destination="#login">
 					<img src="./files/location_icon.png" alt="location-settings-icon" /
 					height="32px" width="32px">
 				</a>
@@ -40,59 +40,82 @@
 					>
 						<img src="./files/search.png" alt="" />
 					</button>
+					<ul id="home-search-suggestions" class="home-search-suggestions"></ul>
 				</form>
 				<section class="home-categories">
 					<p>Meal Categories</p>
-					<!--comment  might receive -->
-					<div>
+					<!--comment  might receive to remove -->
+					<div id="home-categories-wrapper">
 						<a href="" data-id="home-category">Swallow</a>
-						<a href="" data-id="home-category">Rice</a>
-						<a href="" data-id="home-category">Tubers</a>
-						<a href="" data-id="home-category">Sea food</a>
-						<a href="" data-id="home-category">Proteins</a>
-						<a href="" data-id="home-category">Drinks</a>
 					</div>
 				</section>
 				<section class="home-meals">
-					<!-- 	comment must replace -->
+					<!-- 	comment must replace to remove-->
 					<p>Popular Meals</p>
-					<section>
+					<section id="home-meals-wrapper">
 						<div>
 							<div class="image-wrapper">
 								<img
 									src="./files/seafood_shrimp.png"
 									alt="seafood-shrimp-image"
 								/>
-								<button class="view-details">View <span>.</span></button>
+								<button class="homepage-view-details view-details">
+									View <span>.</span>
+								</button>
 							</div>
 							<p>Seafood Shrimp</p>
 							<div class="stars"></div>
-							<p class="price">$3 per plate</p>
+							<p>$3 per plate</p>
 						</div>
 					</section>
 				</section>
 			</main>
 			<footer>
-				<a href="" data-destination ="#homepage"
+				<a href="" data-destination="#homepage"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
-				<a href="" data-destination ="#cart"
+				<a href="" data-destination="#cart"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
-				<a href="" data-destination ="#profile"
+				<a href="" data-destination="#profile"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
 
-				<a href="" data-destination ="#settings"
+				<a href="" data-destination="#settings"
 					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
 					height="32px" width="32px"></a
 				>
 			</footer>
 		</section>
-		<section id="category" class="category hide">
+		<section id="view-meal" class="hide view-meal">
+			<header class="view-meal-header">
+				<a class="view-meal-back-icon-wrapper" data-id="back-button"
+					><img src="./files/back.png" alt=""
+				/></a>
+				<p class="view-meal-header-text">Meal categories</p>
+			</header>
+			<main class="view-meal-main">
+				<section class="view-meal-card" data-meal-id="">
+					<!-- <div class="view-meal-image-wrapper">
+					<img class="view-meal-image"src="./files/one.jpg" alt="seafood-shrimp-image" />
+				</div>
+				<p id="view-meal-title">Seafood Shrimp</p>
+				<p id="view-meal-stars"></p>
+				<p id="view-meal-price">$3 per plate</p>
+				<button class="view-meal-atc-button">
+					Add to cart
+					<img
+						src="./files/seafood_shrimp.png"
+						alt="seafood-shrimp-image"
+					/>
+				</button> -->
+				</section>
+			</main>
+		</section>
+		<!-- 		<section id="category" class="category hide">
 			<header class="category-header">
 				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
 				<span>Meal categories</span>
@@ -118,7 +141,7 @@
 				</div>
 			</main>
 			<footer><span id="category-footer-text">Category</span></footer>
-		</section>
+		</section> -->
 		<section id="sidebar-settings" class="sidebar-settings hide">
 			<header class="sidebar-settings-header">
 				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
@@ -157,23 +180,23 @@
 			</main>
 			<section class="sidebar-settings-footer">
 				<footer>
-					<a href="" data-destination ="#homepage"
-					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-					height="32px" width="32px"></a
-				>
-				<a href="" data-destination ="#cart"
-					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-					height="32px" width="32px"></a
-				>
-				<a href="" data-destination ="#profile"
-					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-					height="32px" width="32px"></a
-				>
+					<a href="" data-destination="#homepage"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
+					<a href="" data-destination="#cart"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
+					<a href="" data-destination="#profile"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
 
-				<a href="" data-destination ="#settings"
-					><img src="./files/replacement.png" alt="sidebar-settings-icon" /
-					height="32px" width="32px"></a
-				>
+					<a href="" data-destination="#settings"
+						><img src="./files/replacement.png" alt="sidebar-settings-icon" /
+						height="32px" width="32px"></a
+					>
 				</footer>
 			</section>
 		</section>
@@ -209,7 +232,7 @@
 				<button class="cart-checkout">Confirm</button>
 			</footer>
 		</section>
-		<section class="schedule  hide">
+		<section class="schedule hide">
 			<header class="schedule-header">
 				<a data-id="back-button"><img src="./files/back.png" alt="" /></a>
 				<span>Make a schedule</span>
@@ -237,7 +260,7 @@
 					<label class="date-label" for="final-date">Final Date</label>
 					<input class="date-input" type="date" id="final-date" />
 				</div>
-				<button class="make-schedule" type="submit" >Proceed</button>
+				<button class="make-schedule" type="submit">Proceed</button>
 			</form>
 		</section>
 		<section id="profile" class="profile hide">
@@ -294,7 +317,8 @@
 		</section>
 		<section class="meal-fed hide">
 			<header class="meal-fed-header">
-				<a data-id="back-button"><img src="./files/back.png" alt="" /></a><span>Meal for each day</span>
+				<a data-id="back-button"><img src="./files/back.png" alt="" /></a
+				><span>Meal for each day</span>
 			</header>
 			<section>
 				<span>Day <span>4</span></span>
@@ -305,6 +329,14 @@
 				<p>Fennel</p>
 			</section>
 			<button type="submit">Continue</button>
+		</section>
+		<section class="login hide" id="login">
+			<form action="">
+				<label for="login-username">Username:</label>
+				<input type="text" id="login-username" />
+				<label for="login-password"> Password:</label>
+				<input type="password" id="login-password" />
+			</form>
 		</section>
 		<script type="text/javascript" src="./script.js"></script>
 	</body>
