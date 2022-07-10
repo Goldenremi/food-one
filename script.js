@@ -6,18 +6,26 @@ let homeMealsWrapper = document.getElementById("home-meals-wrapper");
 let homeCategoriesWrapper = document.getElementById("home-categories-wrapper");
 let homeSearchSuggestions = document.getElementById("home-search-suggestions");
 let homeSearch = document.getElementById("home-search");
-
-
+let cartItems = document.querySelector(".cart-main-items");
+let cartTotalPrice = document.querySelector(".cart-total-price");
+let profileButton = document.querySelector(".profile-button");
+let profileBackButton = document.querySelector(
+	"[data-function='profile-back-button']"
+);
+let profileInputs = Array.from(document.querySelectorAll("#profile input"));
 let filteredMeals;
 
 let servercart = {
-	bolu123:{
+	bolu123: {
 		items: [
-		{
-			time: 13203948,
-			itemId: 1004,
-		},],
-		totalPrice:1000}
+			{
+				time: 13203948,
+				itemId: 1004,
+				price: 1000,
+			},
+		],
+		totalPrice: 1000,
+	},
 };
 
 let servermeals = {
@@ -103,6 +111,42 @@ let servermeals = {
 currentPage = pageHistory[pageHistory.length - 1];
 immediatePastPage = pageHistory[pageHistory.length - 2];
 
+//Profile button handler
+const ProfileButtonCLickHandler = () => {
+	profileButton.addEventListener("click", (event) => {
+		if (event.target.textContent === "Edit detail") {
+			profileInputs.map((profileInput) => {
+				console.log("hereee");
+				profileInput.disabled = false;
+				event.target.textContent = "Submit";
+			});
+		}
+	});
+};
+
+profileBackButton.addEventListener("click", () => {
+	if (profileButton.textContent === "Edit detail") {
+		changeLocation(currentPage, immediatePastPage, true);
+	} else {
+			document.querySelector(".unchanged-profile").classList
+		.remove("hide");
+	}
+});
+
+document.querySelector(".unchanged-profile-yes").addEventListener("click", ()=>{
+	changeLocation(currentPage, immediatePastPage, true)
+	profileInputs.map((profileInput) => {
+				console.log("hereee");
+				profileInput.disabled = true;
+				profileButton.textContent = "Edit detail"})
+	document.querySelector(".unchanged-profile").classList.add('hide')
+
+})
+
+
+document.querySelector(".unchanged-profile-no").addEventListener("click", ()=>{
+	document.querySelector(".unchanged-profile").classList.add('hide')
+})
 //Link default remover
 const linkDefault = () => {
 	Array.from(document.querySelectorAll("a")).map((link) =>
@@ -112,17 +156,96 @@ const linkDefault = () => {
 linkDefault();
 
 
+	Array.from(document.querySelectorAll("button")).map((link) =>
+		link.addEventListener("click", (event) => event.preventDefault())
+	);
 
-const AddToCartClickHandler = () =>{
-	let addToCartButton = document.querySelector("[data-function='add-to-cart']")
-	addToCartButton.addEventListener("click",(event)=>{
-		console.log('yoo')
-	})
-}
 
-const AddtoCart=(username,mealId)=>{
-	serercart
-}
+const AddToCartClickHandler = () => {
+	let addToCartButton = document.querySelector("[data-function='add-to-cart']");
+	addToCartButton.addEventListener("click", (event) => {
+		console.log(event.target.dataset.mealId);
+		AddtoCart("bolu123", event.target.dataset.mealId);
+		RenderCart();
+	});
+};
+
+const AddtoCart = (username, mealId) => {
+	servercart[username].items.push({
+		time: Date.now(),
+		itemId: mealId,
+		price: mealsObject[mealId].price,
+	});
+	servercart[username].totalPrice = servercart[username].items.reduce(
+		(acc, item) => {
+			console.log(item.price, acc);
+			return item.price + acc;
+		},
+		0
+	);
+};
+
+const RemoveFromCartClickHandler = () => {
+	let removeFromCartButtons = Array.from(
+		document.querySelectorAll("[data-function='remove-from-cart']")
+	);
+	removeFromCartButtons.map((removeFromCartButton) => {
+		removeFromCartButton.addEventListener("click", (event) => {
+			console.log(event.target.dataset.mealId);
+			RemoveFromCart("bolu123", event.target.dataset.mealId);
+			RenderCart();
+			console.log("oops");
+		});
+	});
+};
+
+const RemoveFromCart = (username, mealId) => {
+	servercart[username].items = servercart[username].items.filter(
+		(item) => item.itemId !== mealId
+	);
+	servercart[username].totalPrice = servercart[username].items.reduce(
+		(acc, item) => {
+			console.log(item.price, acc);
+			return item.price + acc;
+		},
+		0
+	);
+};
+
+const RenderCart = () => {
+	cartItems.innerHTML = "";
+	cartTotalPrice.textContent = `totalPrice ${servercart.bolu123.totalPrice}`;
+	servercart.bolu123.items.map((item) => {
+		console.log(mealsObject[item.itemId].images.one);
+		cartItems.insertAdjacentHTML(
+			"beforeend",
+
+			`<div>
+					<div class="cart-item">
+						<div class="cart-item-image">
+							<img
+								src=${mealsObject[item.itemId].images.one}
+								alt="seafood-shrimp-image"
+							/>
+						</div>
+						<div>
+							<p class="cart-item-name">${mealsObject[item.itemId].title}</p>
+							<div class="cart-item-stars">a</div>
+							<p class="cart-item-price">$3 per plate</p>
+						</div>
+						<p class="cart-item-plates">Number of plates</p>
+						<span> yo </span>
+						<p class="cart-item-total-price">${mealsObject[item.itemId].price}</p>
+						<span> yo2 </span>
+					</div>
+					<button data-function="remove-from-cart" data-meal-id=${
+						item.itemId
+					}><img src="./files/delete.png" alt="" /></button>
+				</div>`
+		);
+	});
+	RemoveFromCartClickHandler();
+};
 
 const openViewMeal = (mealId) => {
 	document.querySelector(".view-meal-card").innerHTML = "";
@@ -135,7 +258,7 @@ const openViewMeal = (mealId) => {
 				<p id="view-meal-title">${mealsObject[mealId].title}</p>
 				<p id="view-meal-stars"></p>
 				<p id="view-meal-price">N ${mealsObject[mealId].price}</p>
-				<button class="view-meal-atc-button" data-function="add-to-cart">
+				<button class="view-meal-atc-button" data-function="add-to-cart" data-meal-id=${mealId}>
 					Add to cart
 					<img
 						src="./files/seafood_shrimp.png"
@@ -144,7 +267,7 @@ const openViewMeal = (mealId) => {
 				</button>
 				`
 	);
-	AddToCartClickHandler()
+	AddToCartClickHandler();
 };
 
 //Page changers
@@ -167,6 +290,7 @@ const changeLocation = (location, destination, back) => {
 	if (currentPage !== destination) {
 		back ? pageHistory.pop() : pageHistory.push(destination);
 		document.querySelector(location).classList.add("hide");
+		console.log(document.querySelector(destination).classList)
 		document.querySelector(destination).classList.remove("hide");
 		currentPage = pageHistory[pageHistory.length - 1];
 		immediatePastPage = pageHistory[pageHistory.length - 2];
@@ -191,6 +315,8 @@ const OnHomeLoad = (sort) => {
 	mealsObject = servermeals;
 	sortedMeals = Object.values(mealsObject);
 	DisplayHomeMeals(sortedMeals);
+	RenderCart();
+	ProfileButtonCLickHandler();
 };
 
 //Homepage category buttons
