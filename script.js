@@ -424,7 +424,7 @@ const Sorter = (property) => {
 	}
 	// console.log(sortedMeals)
 	// console.log(sortingArray)
-	// console.log(sortedArray)
+	// console.log(sortedArray, 1)
 	// console.log(sortedArray.map(meal=>meal[property]))
 	sortedMeals = sortedArray;
 };
